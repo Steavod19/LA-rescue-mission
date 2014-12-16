@@ -1,4 +1,14 @@
-<h1>Individual Questions</h1>
+<h1>Individual Q-tions</h1>
 
-  <h3><%= question.question_name %></h3>
-  <p><%= question.description %></p>
+  <h3><%= @question.question_name %></h3>
+  <p>Description: <%= @question.description %></p>
+  <p>By: <%= @question.user_id %></p>
+
+
+  <h4>Answers</h4>
+  <% @answer.each do |a| %>
+  <p> <%= a.user_id%> this guy knows the answer: </p>
+  <p> <%= a.answer %> </p>
+    <% end %>
+
+<p><%= link_to "Answer This Question", new_question_answer_path(@question)%></p>

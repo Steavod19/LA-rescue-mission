@@ -1,0 +1,11 @@
+<h1>Individual A-sers</h1>
+
+
+
+  <h4>Answer</h4>
+  <% @answer.each do |a| %>
+  <p> <%= a.user_id %> </p>
+  <p> <%= a.answer %> </p>
+    <% end %>
+
+<!-- <p><%= link_to "Question", question_path(@question)%></p> -->
